@@ -2,7 +2,7 @@ const $ = document.querySelector.bind(document),
   $$ = document.querySelectorAll.bind(document)
 const app = {
   handleEvents: function() {
-    const cursor = $("#cursor")
+    const cursors = $$(".cursor")
     let mouseX = 0,
       mouseY = 0,
       ballX = 0,
@@ -16,8 +16,10 @@ const app = {
       ballX = ballX + distX * speed
       ballY = ballY + distY * speed
 
-      cursor.style.left = ballX + "px"
-      cursor.style.top = ballY + "px"
+      cursors.forEach((cursor) => {
+        cursor.style.left = ballX + "px"
+        cursor.style.top = ballY + "px"
+      })
 
       requestAnimationFrame(animate)
     }
