@@ -22,10 +22,21 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--skin-color);
+  border-radius: 12px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--bg-black-50);
+}
+
 body {
   line-height: 1.5;
   font-size: 1.6rem;
-  font-family: "Poppins" sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body.dark {
@@ -47,7 +58,7 @@ ul {
 }
 
 .main-content {
-  padding-left: 270px;
+  /* padding-left: 270px; */
 }
 
 .section {
@@ -57,6 +68,35 @@ ul {
   z-index: 0;
   opacity: 1;
   padding: 0 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 300ms ease;
+}
+
+.section.back-section {
+  z-index: 1;
+}
+
+.section.active {
+  z-index: 2;
+  opacity: 1;
+  animation: slideSection 600ms ease;
+}
+
+@keyframes slideSection {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .p-12 {
@@ -203,13 +243,14 @@ section.hidden {
   border: 1px solid var(--bg-black-50);
   cursor: pointer;
   position: fixed;
-  left: 300px;
+  left: 20px;
   top: 20px;
   border-radius: 5px;
   background-color: var(--bg-black-100);
   display: none;
   justify-content: center;
   align-items: center;
+  transition: all 300ms ease;
 }
 
 .aside .nav-toggler span {
@@ -684,8 +725,24 @@ h3.my-profession {
 }
 
 @media (max-width: 1199px) {
+  .section.hide-aside{
+    left: 270px;
+  }
   .aside {
     left: -270px;
+    transition: all 300ms ease;
+    /* transform: translateX(-270px); */
+  }
+  .aside .nav-toggler{
+    display: flex;
+  }
+  .aside .nav-toggler.active{
+    display: flex;
+    left: 275px;
+  }
+  .aside.active {
+    /* transform: translateX(0); */
+    left: 0;
   }
   .main-content {
     padding-left: 0;
@@ -713,6 +770,7 @@ h3.my-profession {
 }
 
 @media (max-width: 767px) {
+  .service .service-item,
   .contact .contact-form .col-6,
   .contact .contact-info-item,
   .portfolio .portfolio-item,

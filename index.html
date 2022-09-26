@@ -42,7 +42,7 @@
             </ul>
         </div>
         <div class="main-content">
-            <section class="home section">
+            <section class="home active section">
                 <div class="container">
                     <div class="row">
                         <div class="home-info p-12">
@@ -515,13 +515,30 @@
     <script>
         const $ = document.querySelector.bind(document);
         const $$ = document.querySelectorAll.bind(document);
+        const section = $$('.section')
 
-        $$('.nav li a').forEach(li => {
+        $$('.nav li a').forEach((li, ind) => {
             li.onclick = () => {
+                [...$$('.section')].map(sec => sec.classList.remove('active'));
                 [...$$('.nav li a')].map(i => i.classList.remove('active'))
-                li.classList.add('active')
+                li.classList.add('active');
+                [...$$('.section')][ind].classList.add('active')
+                // showSection(li)
+                $('.aside').classList.toggle('active')
+                $('.section').classList.toggle('.hide-aside')
+                $('.nav-toggler').classList.toggle('active')
             }
         })
+
+        $('.nav-toggler').onclick = () => {
+            $('.aside').classList.toggle('active')
+            $('.nav-toggler').classList.toggle('active')
+            $('.section').classList.toggle('.hide-aside')
+        }
+
+        function showSection(element) {
+
+        }
 
         const typed = new Typed('.typing', {
             strings: ['', 'Frontend Developer', 'Backend Developer', 'Web Designer', 'Photographer'],
