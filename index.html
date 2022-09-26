@@ -2,329 +2,533 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <!--  -->
+    <link rel="stylesheet" href="css/skins/color-1.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--  -->
+    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+    <!--  -->
+    <link rel="stylesheet" href="css/style-switcher.css">
     <style>
-        .ae {
-            color: white;
-        }
-
-        .ac {
-            font-weight: bold;
-        }
-
-        .ab {
-            text-transform: uppercase;
-        }
-
-        .z {
-            font-size: 50px;
-        }
-
-        .ag {
-            color: #9a86fd;
-        }
-
-        .w {
-            top: 100px;
-        }
-
-        .v {
-            right: 100px;
-        }
-
-        .u {
-            position: absolute;
-        }
-
-        .s {
-            animation-name: k1;
-        }
-
-        .r {
-            animation-fill-mode: forwards;
-        }
-
-        .q {
-            animation-direction: alternate;
-        }
-
-        .p {
-            animation-iteration-count: infinite;
-        }
-
-        .o {
-            animation-timing-function: linear;
-        }
-
-        .n {
-            animation-duration: 2s;
-        }
-
-        .m {
-            max-width: 200px;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
-        @keyframes k1 {
-            100% {
-                transform: translateY(30px);
-            }
-        }
-
-        .about {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background-color: var(--bg-white);
-            z-index: 11;
-            transform-origin: bottom;
-            transform: scaleY(0);
-            transition: all 500ms ease-in-out;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 16px;
-        }
-
-        .about.active {
-            transform: scaleY(1);
-        }
-
-        .about .close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 5px;
-            text-transform: uppercase;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .about .close:hover~.cursor {
-            transform: scale(6);
-        }
-
-        .about .about-img {
-            width: 35%;
-            height: 90%;
-            transition: all 300ms;
-        }
-
-        .about .about-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.6;
-        }
-
-        .about .about-img:hover {
-            transform: scale(1.15);
-        }
-
-        .about .about-img:hover~.cursor {
-            transform: scale(6);
-        }
-
-        .about-content-title {
-            width: 1200px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 100px;
-            font-family: g;
-            line-height: 100px;
-            color: var(--text-color);
-            text-transform: none;
-            letter-spacing: 1px;
-            font-weight: normal;
-            margin: auto;
-            text-align: left;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .about-content-text {
-            position: absolute;
-            width: 410px;
-            right: 10%;
-            top: 45%;
-            transform: translateY(-50%);
-            pointer-events: none;
-            font-size: 20px;
-            z-index: 1;
-            line-height: 28px;
-            color: var(--text-color);
-        }
-
-        .about-content-text p {
-            margin: 16px;
-            font-family: sans-serif;
-        }
-
-        .about-content-text p a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: bold;
-            pointer-events: all;
-        }
-
-        .about-contact {
-            position: absolute;
-            left: 20%;
-            bottom: 20%;
-            transform: translate(-50%, 50%);
-        }
-
-        .about-contact p {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .about-contact p a {
-            text-decoration: none;
-            font-size: 20px;
-            z-index: 1;
-            line-height: 28px;
-            color: var(--text-color);
-            font-family: sans-serif;
-        }
-
-        .about-contact:hover~.cursor {
-            transform: scale(6);
-        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <div class="toggle">
-                <span></span>
-                <span></span>
+    <div class="main-container">
+        <div class="aside">
+            <div class="logo">
+                <a href="#"><span>H</span>uthoine</a>
+            </div>
+            <div class="nav-toggler">
                 <span></span>
             </div>
-            <div class="sidebar">
-                <ul class="menu">
-                    <li>
-                        <a href="" data-text="Home">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a class="about-menu" href="" data-text="About">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" data-text="Service">
-                            Service
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" data-text="Portfolio">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" data-text="Contact">
-                            Contact
-                        </a>
-                    </li>
-                    <div class="cursor"></div>
-                </ul>
-            </div>
-        </nav>
-        <div class="slider">
-            <ul id="scene">
-                <li class="layer" data-depth="0.6">
-                    <img src="space.png" class="space" alt="">
-                </li>
-                <li class="layer astronaut" data-depth="0.4">
-                    <div class="v w x y"><img src="swimming-astronaut-dark.png" alt="hello" class="m n o p q r s t">
-                    </div>
-                </li>
-                <li class="layer info" data-depth="0.2">
-                    <h2 class="ab ac ae af z"><span class="ag">Hello</span>, My name is</h2>
-                    <svg viewBox="0 0 900 100" class="svg-text">
-                        <symbol id="s-text"><text text-anchor="middle" x="50%" y="50%" dy=".35em">Nguyen Huu
-                                Thoai</text></symbol>
-                        <use xlink:href="#s-text" class="huthoi-text"></use>
-                        <use xlink:href="#s-text" class="huthoi-text"></use>
-                        <use xlink:href="#s-text" class="huthoi-text"></use>
-                        <use xlink:href="#s-text" class="huthoi-text"></use>
-                        <use xlink:href="#s-text" class="huthoi-text"></use>
-                    </svg>
-                    <h2 class="ab ac ae af z">I am
-                        <!-- --> <span class="ag">Frontend Developer</span>
-                    </h2>
-                </li>
-
+            <ul class="nav">
+                <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+                <li><a href="#service"><i class="fa fa-list"></i>Service</a></li>
+                <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i>Conatct</a></li>
             </ul>
         </div>
-        <div class="about">
-            <div class="close">Close</div>
-            <div class="about-content">
-                <div class="about-content-title">
-                    <p>Have an idea?</p>
-                    <p>Let’s make</p>
-                    <p>something together.</p>
+        <div class="main-content">
+            <section class="home section">
+                <div class="container">
+                    <div class="row">
+                        <div class="home-info p-12">
+                            <h3 class="hello">Hello, my name is <span>Nguyen Huu Thoai</span></h3>
+                            <h3 class="my-profession">
+                                I'm a <span class="typing">Web developer</span>
+                            </h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam deleniti eveniet
+                                delectus ad ipsa blanditiis? Numquam deleniti consectetur aspernatur iusto cupiditate
+                                tenetur magni nobis nemo, sequi totam aperiam odit rem!</p>
+                            <a href="#contact" class="btn hire-me">Hire me</a>
+                        </div>
+                        <div class="home-img p-12">
+                            <img src="images/avatar.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="about-content-text">
-                    <p>Hello! I’m Nguyen Huu Thoai.</p>
-                    <p>I am a front-end
-                        developer at <a href="" target="_blank" class="link-large">FPT Polytechnic</a> since 2021. I'm
-                        ready to collaborate with new opportunities and challenges as a freelancer for web design and
-                        development.
-                    </p>
+            </section>
+            <section id="about" class="about section">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title p-12">
+                            <h2>About me</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="about-content p-12">
+                            <div class="row">
+                                <div class="about-text p-12">
+                                    <h3>I'm Nguyen Huu Thoai and <span>Web Developer</span></h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At temporibus reiciendis
+                                        et non consectetur ipsum sequi, quisquam iusto excepturi aspernatur voluptates
+                                        perferendis, aut inventore error repellat animi delectus, sit numquam.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="personal-info p-12">
+                                    <div class="row">
+                                        <div class="info-item p-12">
+                                            <p>Birthday: <span>2003</span></p>
+                                        </div>
+                                        <div class="info-item p-12">
+                                            <p>Age: <span>19</span></p>
+                                        </div>
+                                        <div class="info-item p-12">
+                                            <p>Website: <span>huthoine</span></p>
+                                        </div>
+                                        <div class="info-item p-12">
+                                            <p>Email: <span>info@gmail.com</span></p>
+                                        </div>
+                                        <div class="info-item p-12">
+                                            <p>Phone: <span>12468246</span></p>
+                                        </div>
+                                        <div class="info-item p-12">
+                                            <p>City: <span>Can Tho</span></p>
+                                        </div>
+                                        <div class="info-item p-12">
+                                            <p>Freelance: <span>Available</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="buttons p-12s">
+                                            <a href="#" class="btn">Download CV</a>
+                                            <a href="#contact" class="btn hire-me">Hire me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skills p-12">
+                                    <div class="row">
+                                        <div class="skill-item p-12">
+                                            <h5>CSS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 76%;"></div>
+                                                <div class="skill-percent">76%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item p-12">
+                                            <h5>PHP</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 76%;"></div>
+                                                <div class="skill-percent">60%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item p-12">
+                                            <h5>HTML</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 85%;"></div>
+                                                <div class="skill-percent">85%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item p-12">
+                                            <h5>JS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 76%;"></div>
+                                                <div class="skill-percent">76%</div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item p-12">
+                                            <h5>CSS</h5>
+                                            <div class="progress">
+                                                <div class="progress-in" style="width: 80%;"></div>
+                                                <div class="skill-percent">80%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="education p-12">
+                                    <h3 class="title">
+                                        Education
+                                    </h3>
+                                    <div class="row">
+                                        <div class="timeline-box p-12">
+                                            <div class="timeline shadow-dark">
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i>2020 - 2021
+                                                    </h3>
+                                                    <h4 class="timeline-title">
+                                                        Master in computer Science
+                                                    </h4>
+                                                    <p class="timeline-text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+                                                        mollitia beatae quae quis, exercitationem doloremque
+                                                        repudiandae, suscipit expedita autem quo hic sequi obcaecati
+                                                        veritatis repellendus eum enim animi quasi. Dolore.
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i>2020 - 2021
+                                                    </h3>
+                                                    <h4 class="timeline-title">
+                                                        Master in computer Science
+                                                    </h4>
+                                                    <p class="timeline-text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+                                                        mollitia beatae quae quis, exercitationem doloremque
+                                                        repudiandae, suscipit expedita autem quo hic sequi obcaecati
+                                                        veritatis repellendus eum enim animi quasi. Dolore.
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i>2020 - 2021
+                                                    </h3>
+                                                    <h4 class="timeline-title">
+                                                        Master in computer Science
+                                                    </h4>
+                                                    <p class="timeline-text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+                                                        mollitia beatae quae quis, exercitationem doloremque
+                                                        repudiandae, suscipit expedita autem quo hic sequi obcaecati
+                                                        veritatis repellendus eum enim animi quasi. Dolore.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience p-12">
+                                    <h3 class="title">
+                                        Experience
+                                    </h3>
+                                    <div class="row">
+                                        <div class="timeline-box p-12">
+                                            <div class="timeline shadow-dark">
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i>2020 - 2021
+                                                    </h3>
+                                                    <h4 class="timeline-title">
+                                                        Master in computer Science
+                                                    </h4>
+                                                    <p class="timeline-text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+                                                        mollitia beatae quae quis, exercitationem doloremque
+                                                        repudiandae, suscipit expedita autem quo hic sequi obcaecati
+                                                        veritatis repellendus eum enim animi quasi. Dolore.
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i>2020 - 2021
+                                                    </h3>
+                                                    <h4 class="timeline-title">
+                                                        Master in computer Science
+                                                    </h4>
+                                                    <p class="timeline-text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+                                                        mollitia beatae quae quis, exercitationem doloremque
+                                                        repudiandae, suscipit expedita autem quo hic sequi obcaecati
+                                                        veritatis repellendus eum enim animi quasi. Dolore.
+                                                    </p>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i>2020 - 2021
+                                                    </h3>
+                                                    <h4 class="timeline-title">
+                                                        Master in computer Science
+                                                    </h4>
+                                                    <p class="timeline-text">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+                                                        mollitia beatae quae quis, exercitationem doloremque
+                                                        repudiandae, suscipit expedita autem quo hic sequi obcaecati
+                                                        veritatis repellendus eum enim animi quasi. Dolore.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="about-contact">
-                <p>
-                    <span class="material-symbols-outlined">
-                        arrow_forward
-                    </span>
-                    <a href="">nguyenhuuthoai2021@gmail.com</a>
-                </p>
-                <p>
-                    <span style="width: 20px;"></span>
-                    <a href="">+84234567890</a>
-                </p>
-            </div>
-            <div class="about-img">
-                <img src="./avatar.jpg" alt="">
-            </div>
-            <div class="cursor"></div>
+            </section>
+            <section id="service" class="service section">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title p-12">
+                            <h2>Services</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="service-item p-12">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-mobile-alt">
+                                    </i>
+                                </div>
+                                <h4>Web Design </h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque odio temporibus id
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-item p-12">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-laptop-code">
+                                    </i>
+                                </div>
+                                <h4>Web Design </h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque odio temporibus id
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-item p-12">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-palette">
+                                    </i>
+                                </div>
+                                <h4>Web Design </h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque odio temporibus id
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-item p-12">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-code">
+                                    </i>
+                                </div>
+                                <h4>Web Design </h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque odio temporibus id
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-item p-12">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-search">
+                                    </i>
+                                </div>
+                                <h4>Web Design </h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque odio temporibus id
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-item p-12">
+                            <div class="service-item-inner">
+                                <div class="icon">
+                                    <i class="fa fa-headphones">
+                                    </i>
+                                </div>
+                                <h4>Web Design </h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque odio temporibus id
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="portfolio" class="portfolio section">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title p-12">
+                            <h2>Portfolio</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="portfolio-heading p-12">
+                            <h2>My Last Project: </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="portfolio-item p-12">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item p-12">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item p-12">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item p-12">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item p-12">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item p-12">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="contact section">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title p-12">
+                            <h2>Contact Me</h2>
+                        </div>
+                    </div>
+                    <h3 class="contact-title p-12">Have You Any Question ?</h3>
+                    <h4 class="contact-sub-title p-12">I'm at your service</h4>
+                    <div class="row">
+                        <div class="contact-info-item p-12">
+                            <div class="icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <h4>Call us on</h4>
+                            <p>123456789</p>
+                        </div>
+                        <div class="contact-info-item p-12">
+                            <div class="icon">
+                                <i class="fa fa-marker"></i>
+                            </div>
+                            <h4>Office</h4>
+                            <p>Huthoine</p>
+                        </div>
+                        <div class="contact-info-item p-12">
+                            <div class="icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <h4>Email</h4>
+                            <p>info@gmail.com</p>
+                        </div>
+                        <div class="contact-info-item p-12">
+                            <div class="icon">
+                                <i class="fa fa-globe-europe"></i>
+                            </div>
+                            <h4>Website</h4>
+                            <p>huthoi.info</p>
+                        </div>
+                    </div>
+                    <h3 class="contact-title p-12">Send Me An Email</h3>
+                    <h4 class="contact-sub-title p-12">I'm Very Resposive to message</h4>
+                    <div class="row">
+                        <div class="contact-form p-12">
+                            <div class="row">
+                                <div class="form-item col-6 p-12">
+                                    <div class="form-group">
+                                        <input type="text" name="" id="" class="form-control" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 p-12">
+                                    <div class="form-group">
+                                        <input type="email" name="" id="" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 p-12">
+                                    <div class="form-group">
+                                        <input type="text" name="" id="" class="form-control" placeholder="Subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 p-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="" id="" cols="30" rows="10"
+                                            placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 p-12">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn">Send me</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="./script.js"></script>
+    <div class="style-switcher">
+        <div class="style-switcher-toggler s-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon">
+            <i class="fas fa-moon"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+    <script src="js/style-switcher.js"></script>
     <script>
-        const scene = $('#scene');
-        const parallax = new Parallax(scene);
-        const close = $('.close')
-        const about = $('.about')
-        const aboutMenu = $('.about-menu')
-        aboutMenu.onclick = (e) => {
-            e.preventDefault()
-            about.classList.add('active')
-        }
-        close.onclick = () => {
-            about.classList.remove('active')
-        };
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+
+        $$('.nav li a').forEach(li => {
+            li.onclick = () => {
+                [...$$('.nav li a')].map(i => i.classList.remove('active'))
+                li.classList.add('active')
+            }
+        })
+
+        const typed = new Typed('.typing', {
+            strings: ['', 'Frontend Developer', 'Backend Developer', 'Web Designer', 'Photographer'],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        })
     </script>
 </body>
 
