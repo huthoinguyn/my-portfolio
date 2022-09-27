@@ -71,6 +71,17 @@ ul {
   flex-direction: column;
 }
 
+.sub-intro {
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  z-index: 999;
+}
+
 .intro .intro-text {
   /* position: absolute; */
   display: inline-block;
@@ -83,8 +94,7 @@ ul {
   display: inline-block;
 }
 
-.main-content {
-  /* padding-left: 270px; */
+.main-container {
 }
 
 .section {
@@ -100,7 +110,7 @@ ul {
   bottom: 0;
   left: 270px;
   z-index: 0;
-  opacity: 0;
+  opacity: 1;
   overflow-y: auto;
   overflow-x: hidden;
   transition: all 300ms ease;
@@ -281,10 +291,23 @@ section.hidden {
 
 .aside .nav-toggler span {
   height: 2px;
-  width: 8px;
+  width: 18px;
   background-color: var(--skin-color);
   display: inline-block;
   position: relative;
+  transition: all 300ms ease;
+}
+
+.aside .nav-toggler.open span {
+  background-color: transparent;
+}
+.aside .nav-toggler.open span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.aside .nav-toggler.open span::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 .aside .nav-toggler span::before {
   content: "";
@@ -294,6 +317,7 @@ section.hidden {
   background-color: var(--skin-color);
   top: -6px;
   left: 0;
+  transition: all 300ms ease;
 }
 .aside .nav-toggler span::after {
   content: "";
@@ -303,6 +327,7 @@ section.hidden {
   background-color: var(--skin-color);
   top: 6px;
   left: 0;
+  transition: all 300ms ease;
 }
 .aside .nav {
   margin-top: 50px;
@@ -780,25 +805,26 @@ h3.my-profession {
 }
 
 @media (max-width: 1199px) {
-  .section.hide-aside {
+  .section {
     left: 0;
+  }
+  .section.open {
+    left: 270px;
   }
   .aside {
     left: -270px;
     transition: all 300ms ease;
-    /* transform: translateX(-270px); */
+  }
+  .aside.open {
+    left: 0;
   }
   .aside .nav-toggler {
     display: flex;
   }
-  .aside .nav-toggler.active {
-    display: flex;
+  .aside .nav-toggler.open {
     left: 275px;
   }
-  .aside.active {
-    /* transform: translateX(0); */
-    left: 0;
-  }
+
   .main-content {
     padding-left: 0;
   }
