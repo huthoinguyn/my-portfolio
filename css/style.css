@@ -57,6 +57,32 @@ ul {
   list-style: none;
 }
 
+.intro {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro .intro-text {
+  /* position: absolute; */
+  display: inline-block;
+  overflow: hidden;
+}
+.intro .intro-text span {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.8rem;
+  display: inline-block;
+}
+
 .main-content {
   /* padding-left: 270px; */
 }
@@ -628,6 +654,7 @@ h3.my-profession {
   border: 6px solid var(--bg-black-100);
   overflow: hidden;
   cursor: pointer;
+  position: relative;
 }
 
 .portfolio .portfolio-item-inner img {
@@ -635,6 +662,34 @@ h3.my-profession {
   display: block;
 }
 
+.portfolio .portfolio-item-inner .portfolio-blur {
+  background-color: #000;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 300ms ease;
+}
+.portfolio .portfolio-item-inner .visit-website {
+  background-color: var(--skin-color);
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(0);
+  padding: 12px 24px;
+  transition: all 300ms ease;
+  z-index: 1;
+}
+
+.portfolio .portfolio-item-inner:hover .portfolio-blur {
+  opacity: 0.6;
+}
+.portfolio .portfolio-item-inner:hover .visit-website {
+  transform: translate(-50%, -50%) scaleX(1);
+}
 /* Contact */
 
 .contact-title {
@@ -725,7 +780,7 @@ h3.my-profession {
 }
 
 @media (max-width: 1199px) {
-  .section.hide-aside{
+  .section.hide-aside {
     left: 0;
   }
   .aside {
@@ -733,10 +788,10 @@ h3.my-profession {
     transition: all 300ms ease;
     /* transform: translateX(-270px); */
   }
-  .aside .nav-toggler{
+  .aside .nav-toggler {
     display: flex;
   }
-  .aside .nav-toggler.active{
+  .aside .nav-toggler.active {
     display: flex;
     left: 275px;
   }

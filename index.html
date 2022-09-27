@@ -25,6 +25,10 @@
 </head>
 
 <body>
+    <div class="intro">
+        <div class="hi intro-text"><span>Hi</span></div>
+        <div class="im intro-text"><span>i'm Nguyen Huu Thoai</span></div>
+    </div>
     <div class="main-container">
         <div class="aside">
             <div class="logo">
@@ -357,55 +361,8 @@
                             <h2>My Last Project: </h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="portfolio-item p-12">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item p-12">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item p-12">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item p-12">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item p-12">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item p-12">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row portfolio-list">
+                        <!-- portfolio-item -->
                     </div>
                 </div>
             </section>
@@ -508,6 +465,9 @@
             <span class="color-5" onclick="setActiveStyle('color-5')"></span>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+        integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
         referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
@@ -546,6 +506,54 @@
             backSpeed: 60,
             loop: true
         })
+
+        const portfolioList = [
+            {
+                img: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                src: 'https://huthoinguyn.github.io/ThoaiNHPC04496_ASM_GD1/'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+                src: 'https://nhtm-usic.vercel.app/'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1499343245400-cddc78a01317?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                src: 'https://trello-2imezxicm-huthoinguyn.vercel.app/'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                src: 'https://fashion-q84edpl8h-huthoinguyn.vercel.app/'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                src: 'https://fashion-q84edpl8h-huthoinguyn.vercel.app/'
+            },
+            {
+                img: 'https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2058&q=80',
+                src: 'https://fashion-q84edpl8h-huthoinguyn.vercel.app/'
+            },
+        ]
+
+        portfolioList.map(port => {
+            const template = `
+            <div class="portfolio-item p-12">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="${port.img}"
+                                        alt="">
+                                </div>
+                                <a href="${port.src}" target='blank' class="visit-website">Visit Website</a>
+                                <div class="portfolio-blur"></div>
+                            </div>
+                        </div>
+            `
+            $('.portfolio-list').insertAdjacentHTML('beforeend', template)
+        })
+
+        const tl = gsap.timeline()
+        tl.fromTo('.intro-text span', { y: '100%' }, { y: 0, duration: 0.4, stagger: 0.4 })
+            .to('.intro-text span', { y: '-100%', duration: 0.4, stagger: 0.2, delay: 0.6 })
+            .to('.intro', { y: '-100%', duration: 0.6, delay: 0.4 })
     </script>
 </body>
 
