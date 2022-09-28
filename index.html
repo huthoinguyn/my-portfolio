@@ -43,7 +43,7 @@
                 <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
                 <li><a href="#service"><i class="fa fa-list"></i>Service</a></li>
                 <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-                <li><a href="#contact"><i class="fa fa-comments"></i>Conatct</a></li>
+                <li><a class="nav-contact" href="#contact"><i class="fa fa-comments"></i>Conatct</a></li>
             </ul>
         </div>
         <div class="main-content">
@@ -320,61 +320,10 @@
         referrerpolicy="no-referrer"></script>
     <script src="js/style-switcher.js"></script>
     <script>
-        const $ = document.querySelector.bind(document);
-        const $$ = document.querySelectorAll.bind(document);
-        const section = $$('.section')
-
-        $$('.nav li a').forEach((li, ind) => {
-            li.onclick = () => {
-                [...$$('.section')].map(sec3 => sec3.classList.remove('back-section'));
-                [...$$('.section')].map(sec2 => {
-                    if (sec2.classList.contains('active')) {
-                        sec2.classList.add('back-section')
-                    }
-                    sec2.classList.remove('active')
-                });
-                [...$$('.section')].map(sec => sec.classList.remove('active'));
-                [...$$('.nav li a')].map(i => i.classList.remove('active'));
-                li.classList.add('active');
-                [...$$('.section')][ind].classList.add('active')
-                $('.aside').classList.toggle('open')
-                $('.section').classList.toggle('open')
-                $('.nav-toggler').classList.toggle('open');
-
-            }
-        })
-
-        $('.nav-toggler').onclick = () => {
-            $('.nav-toggler').classList.toggle('open')
-            $('.section').classList.toggle('open')
-            $('.aside').classList.toggle('open')
-        }
-
-        if (window.innerWidth < 1200) {
-            $('.aside').classList.remove('open')
-
-        }
-
-        const typed = new Typed('.typing', {
-            strings: ['', 'Frontend Developer', 'Backend Developer', 'Web Designer', 'Photographer'],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
-        })
-        const subTyped = new Typed('.sub-typing', {
-            strings: ['', 'Frontend Developer', 'Backend Developer', 'Web Designer', 'Photographer'],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
-        })
-
-        const tl = gsap.timeline()
-        tl.fromTo('.intro-text span', { y: '100%' }, { y: 0, duration: 0.4, stagger: 0.4 })
-            .to('.intro-text span', { y: '-100%', duration: 0.4, stagger: 0.2, delay: 0.6 })
-            .to('.sub-intro', { y: '-100%', duration: 0.9 })
-            .to('.intro', { y: '-100%', duration: 0.4, delay: 0.4 }, '-=.6')
+        
     </script>
     <script src="js/script.js"></script>
+    <script src="js/content.js"></script>
 </body>
 
 </html>
